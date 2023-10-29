@@ -11,10 +11,7 @@ private String editorial;
 private String picUrl;
 private String description;
 private int numberinCart;
-
-
-
-    private int id;
+private int id;
 
     public BookDomain(String nameBook, String etiqueta, String autor, String editorial,String picUrl, int id) {
         this.nameBook = nameBook;

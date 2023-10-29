@@ -94,7 +94,7 @@ El Principito, protagonista de la historia, es un niño muy singular que habita 
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="24dp"
-                    android:background="@drawable/green_buttom_backgraund"
+                    android:background="@drawable/orange_buttom_backgraund"
                     android:text="Leer"
                     android:textColor="@color/white"
                     android:textSize="20dp"
