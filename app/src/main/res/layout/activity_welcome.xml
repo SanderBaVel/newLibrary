@@ -6,26 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".Activity.Welcome">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="900dp"
-        android:layout_height="900dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426"
-        app:srcCompat="@drawable/fondo" />
-
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Vienvenido a \n Vistual Book System"
-        android:textColor="@color/white"
+        android:text="Bienvenido a \n Virtual Book System"
+        android:textColor="@color/black"
         android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +26,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
         android:text="Encuentra \nel libro que \nbuscas más \nrápido"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="60dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +39,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Virtual Book System \nEs un sistema de alojamiento de \nde libros para tu formación académica."
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
