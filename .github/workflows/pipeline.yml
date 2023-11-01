@@ -2,7 +2,7 @@ name: Android Pipeline
 
 on:
   push:
-    branches: [ "pipeline" ]
+    branches: ["pipeline"]
   pull_request:
     branches: [ "pipeline" ]
 
