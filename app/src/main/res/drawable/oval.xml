@@ -11,7 +11,7 @@
         </corners>
         <stroke
             android:width="5px"
-            android:color="@color/white"
+            android:color="@color/orange"
 
             ></stroke>
 </shape>

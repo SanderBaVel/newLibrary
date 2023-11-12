@@ -7,8 +7,8 @@
 
     <style name="Theme.NewLibrary" parent="Base.Theme.NewLibrary" />
     <style name="bottomNavigation">
-        <item name="android:background">@color/black3</item>
-        <item name="itemIconTint">@color/gray</item>
-        <item name="itemTextColor">@color/gray</item>
+        <item name="android:background">@color/gray</item>
+        <item name="itemIconTint">@color/white</item>
+        <item name="itemTextColor">@color/orange</item>
     </style>
 </resources>

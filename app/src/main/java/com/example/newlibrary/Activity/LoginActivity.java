@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         String inputUsername = user.getText().toString();
         String inputPassword = pass.getText().toString();
         if (inputUsername.equals(usernama) && inputPassword.equals(password)){
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, BarraNav.class);
             startActivity(intent);
             finish();
         }else {

@@ -20,7 +20,6 @@ public class Foro extends Fragment {
     public Foro() {
         // Required empty public constructor
     }
-
     public static Foro newInstance(String param1, String param2) {
         Foro fragment = new Foro();
         Bundle args = new Bundle();

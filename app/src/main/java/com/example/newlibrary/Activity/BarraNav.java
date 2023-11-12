@@ -44,6 +44,4 @@ public class BarraNav extends AppCompatActivity{
         transaction.replace(R.id.frame_conteiner, fragment);
         transaction.commit();
     }
-
-
 }
