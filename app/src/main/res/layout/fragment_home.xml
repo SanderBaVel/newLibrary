@@ -78,9 +78,11 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editTextText"
-                    android:layout_width="245dp"
-                    android:layout_height="42dp"
+                    android:id="@+id/buscador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLines="3"
                     android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:background="@color/white"
@@ -93,20 +95,7 @@
                     android:padding="8dp"
                     android:textSize="15sp" />
 
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@color/gray" />
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
 
             </LinearLayout>
 
@@ -125,6 +114,11 @@
                     android:clipToPadding="false"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".Activity.Foro" />
             </LinearLayout>
 
             <LinearLayout
@@ -146,12 +140,12 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/verTodo"
                     android:layout_width="1dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="SeeAll"
-                    android:text="ver mas"
+                    android:text="ver todo"
                     android:textAlignment="textEnd"
                     android:textColor="@color/green"
                     android:textSize="15dp" />
@@ -166,10 +160,5 @@
                 android:paddingEnd="16dp" />
         </LinearLayout>
     </ScrollView>
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Activity.Foro"
-        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

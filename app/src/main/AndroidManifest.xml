@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +18,9 @@
         android:theme="@style/Theme.NewLibrary"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Activity.ReadBook"
+            android:exported="false" />
         <activity
             android:name=".Activity.UserInfo"
             android:exported="false" />
@@ -29,10 +34,10 @@
             android:name=".Activity.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.BarraNav"
+            android:name=".Activity.Welcome"
             android:exported="false" />
         <activity
-            android:name=".Activity.Welcome"
+            android:name=".Activity.BarraNav"
             android:exported="true"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
@@ -42,7 +47,6 @@
             </intent-filter>
             />
         </activity>
-
     </application>
 
 </manifest>

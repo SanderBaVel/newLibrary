@@ -1,11 +1,14 @@
 package com.example.newlibrary.Activity;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -62,6 +65,14 @@ public class Download extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
+        //-------------------permisos para almacenar libros en dispositivo-----------
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            if (!Environment.isExternalStorageManager()) {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+                startActivity(intent);
+            }
+        }
+        //---------------inflar tarjetas de descarga--------------------
             View view = inflater.inflate(R.layout.fragment_download, container, false);
             initRecyclerView(view);
             return view;
@@ -79,7 +90,7 @@ public class Download extends Fragment {
     public void Respuestas(Context context,ArrayList<DownloadDomain> downloadDomains){
         //Context context = requireContext();
         RequestQueue queue = Volley.newRequestQueue(context);
-        String url ="http://192.168.137.1/api-rest/registros.php";
+        String url ="http://192.168.100.131/api-rest/registros.php";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -91,7 +102,11 @@ public class Download extends Fragment {
                                 JSONObject jsonObject = jsonArray.getJSONObject(i);
 
                                 downloadDomains.add(new DownloadDomain(
-                                        jsonObject.getString("nombreLibro"),
+                                        jsonObject.getInt("id"),
+                                        jsonObject.getInt("volumen"),
+                                        jsonObject.getString("carrera"),
+                                        jsonObject.getString("materia"),
+                                        jsonObject.getString("titulolb"),
                                         jsonObject.getString("autor")));
                             }adapterBooksDownload.notifyDataSetChanged();
                         } catch (JSONException e) {
@@ -104,8 +119,5 @@ public class Download extends Fragment {
             }
         });
         queue.add(jsonObjectRequest);
-    }
-    public void OnClickDesc(){
-        Toast.makeText(getContext(),"preciono descarga", Toast.LENGTH_SHORT).show();
     }
     }
