@@ -54,7 +54,6 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/orange_buttom_backgraund"
         android:gravity="center"
-        android:onClick="LogearOnClick"
         android:padding="8dp"
         android:text="Iniciar Sesión"
         android:textSize="15dp"

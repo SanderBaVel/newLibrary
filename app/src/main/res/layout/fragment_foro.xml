@@ -16,12 +16,65 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="16dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|bottom"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/border_background"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/buscador"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:drawablePadding="8dp"
+                        android:ems="150"
+                        android:hint="Mensaje"
+                        android:maxLines="3"
+                        android:padding="8dp"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/Send"
+                    android:layout_width="58dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/avion" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ScrollView
+            android:id="@+id/sroll"
             android:layout_width="match_parent"
-            android:layout_height="592dp"
-            android:id="@+id/sroll">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -35,45 +88,9 @@
             </LinearLayout>
 
         </ScrollView>
-        <ImageView
-            android:id="@+id/Send"
-            android:layout_width="58dp"
-            android:layout_height="37dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/avion"
-            android:layout_gravity="end|bottom"/>
 
-        <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/border_background"
-            android:orientation="horizontal"
-            android:layout_gravity="start|bottom">
-
-            <EditText
-                android:id="@+id/buscador"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:backgroundTint="@color/white"
-                android:drawablePadding="8dp"
-                android:ems="150"
-                android:hint="Mensaje"
-                android:maxLines="3"
-                android:padding="8dp"
-                android:textSize="15sp" />
-
-
-        </LinearLayout>
     </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -24,7 +24,6 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
     public BookListAdapter(ArrayList<BookAllDomain> items) {
         this.items = items;
         notifyDataSetChanged();
-
     }
     @NonNull
     @Override

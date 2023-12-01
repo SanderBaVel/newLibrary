@@ -7,11 +7,11 @@
         android:title="Home" />
 <item
     android:id="@+id/downloal"
-    android:icon="@drawable/download"
+    android:icon="@drawable/descargar"
     android:title="Descarga" />
     <item
         android:id="@+id/foro"
-        android:icon="@drawable/book"
+        android:icon="@drawable/foro"
         android:title="Foro" />
 
 </menu>

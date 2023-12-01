@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">newLibrary</string>
+    <string name="app_name">VirtualBS</string>
     <string name="username">Nombre de Usuario</string>
     <string name="password">Contraseña</string>
     <string name="login">Iniciar sesion</string>

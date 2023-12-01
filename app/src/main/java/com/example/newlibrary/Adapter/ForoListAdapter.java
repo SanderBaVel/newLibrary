@@ -20,7 +20,7 @@ public class ForoListAdapter extends RecyclerView.Adapter<ForoListAdapter.ViewHo
 
     public ForoListAdapter(ArrayList<ForoDomain> items) {
         this.items = items;
-        //notifyDataSetChanged();
+        notifyDataSetChanged();
 
     }
     @NonNull

@@ -36,14 +36,15 @@ public class Foro extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private String user ="Sander";
-    private String url ="http://192.168.100.131/api-rest/insert.php";
+    private String user ="userName";
+    private String url ="http://192.168.137.1/api-rest/insert.php";
     //RecyclerView verMensajes;
     EditText texto;
     ImageView send;
     Context context;
     private RecyclerView recyckerViewForo;
     private RecyclerView.Adapter adapterForo;
+    private RecyclerView.Adapter updateForo;
 
     private String mParam1;
     private String mParam2;
@@ -125,7 +126,7 @@ public class Foro extends Fragment {
     }
     public void Respuesta(Context context, ArrayList<ForoDomain> foroDomains){
         RequestQueue queue = Volley.newRequestQueue(context);
-        String url ="http://192.168.100.131/api-rest/foro.php";
+        String url ="http://192.168.137.1/api-rest/foro.php";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -150,5 +151,10 @@ public class Foro extends Fragment {
             }
         });
         queue.add(jsonObjectRequest);
+    }
+    public void actualizarDatos(ArrayList<ForoDomain> newData) {
+        //data.clear();
+        //data.addAll(newData);
+        //adapterForo.notifyDataSetChanged();
     }
 }

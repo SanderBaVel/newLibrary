@@ -4,6 +4,7 @@ package com.example.newlibrary.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ import java.io.File;
 public class ReadBook extends AppCompatActivity {
     private PDFView pdfView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +33,13 @@ public class ReadBook extends AppCompatActivity {
         }
 
     }
+    public void regresar(View view){
+        Intent intent = new Intent(ReadBook.this, BarraNav.class);
+        startActivity(intent);
+    }
     public void openPdf(String name){
         // Verificar si la tarjeta SD está disponible
-        String filePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/" + name + ".pdf";
+        String filePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/" + name;
 
 // Verificar si el archivo existe
         File file = new File(filePath);

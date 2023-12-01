@@ -34,10 +34,10 @@
             android:name=".Activity.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.Welcome"
+            android:name=".Activity.BarraNav"
             android:exported="false" />
         <activity
-            android:name=".Activity.BarraNav"
+            android:name=".Activity.Welcome"
             android:exported="true"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>

@@ -8,7 +8,7 @@ import android.os.Environment;
 public class RespuestaDescarga{
     private static final int REQUEST_CODE = 100;
     public void descargarLibro(Context context, String outputFileName) {
-        String url = "http://192.168.100.131/api-rest/libros/" + outputFileName + ".pdf";
+        String url = "http://192.168.137.1/api-rest/libros/" + outputFileName;
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
         request.setTitle(outputFileName);
         request.setDescription("Descargando" + outputFileName);

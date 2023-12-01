@@ -90,7 +90,7 @@ public class Download extends Fragment {
     public void Respuestas(Context context,ArrayList<DownloadDomain> downloadDomains){
         //Context context = requireContext();
         RequestQueue queue = Volley.newRequestQueue(context);
-        String url ="http://192.168.100.131/api-rest/registros.php";
+        String url ="http://192.168.137.1/api-rest/registros.php";
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
